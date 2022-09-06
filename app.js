@@ -5,6 +5,8 @@ const storage = multer.memoryStorage();
 const uploads = multer({storage});
 const sharp = require('sharp');
 const fs = require('fs');
+const Data = require('./createdata');
+const imgPro = require('./imgpro');
 
 
 server.set('view engine', 'ejs');
@@ -20,28 +22,21 @@ server.get('/', (req, res) => {
 
 
 
+// const test = async () => {
+//    const list = await gallery.getSingle('1662455579509');
+//   console.log(list);
+// }
+
+// test();
+// gallery.create({title: 'some title', content: 'some content'});
+
+
+
 server.post('/stats', uploads.single('uploaded_file'), async function (req, res) {
-    console.log('file', req.file);
-    console.log('body', req.body);
-  
-    fs.access('uploads/resized/', (err) => {
-        if(err){
-            fs.mkdirSync('uploads/resized/')
-        }
-    });
-    fs.access('uploads/original/', (err) => {
-        if(err){
-            fs.mkdirSync('uploads/original/')
-        }
-    });
-    fs.writeFileSync('uploads/original/' +req.file.originalname, req.file.buffer, (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
-    });
-    await sharp(req.file.buffer)
-    .resize({width: 300, height: 200})
-    .composite([{ input: './img/logo.png', gravity: 'center' }])
-    .toFile('uploads/resized/' + req.file.originalname);
+    const gallery = new Data();
+    const id = new Data().createId();
+    const imageName = await imgPro(req, id);
+    gallery.create(req.body, id, imageName);
     res.send('submit succesfull');
  });
 
