@@ -66,3 +66,18 @@ aside {
 .options {
     display: flex;
 }
+
+.price {
+    padding: 4px;
+}
+
+.remove {
+    padding: 4px;
+}
+
+.selectors {
+    padding-left: 4px;
+}
+
+
+

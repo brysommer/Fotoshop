@@ -4,96 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer">        
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="./script/cart.js" async></script>
+    <script src="./script/getdata.js"></script>
+
     <title>Document</title>
 </head>
 <body>
     <header><h1>Перший дзвоник ЗОШ №23</h1></header>
     <main>
         <div class="mini">
-            <img src="/img/1.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/1.jpg" alt="" height="200" width="300">
         </div>
         <div class="mini">
-            <img src="/img/2.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/2.jpg" alt="" height="200" width="300">
 
         </div>
 
         <div class="mini">
-            <img src="/img/3.jpg" alt="" height="200" width="300">
-
-        </div>
-        <div class="mini">
-            <img src="/img/4.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/3.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/5.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/4.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/6.jpg" alt="" height="200" width="300">
+            <img  class="itemimage" src="/img/5.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/7.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/6.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/8.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/7.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/9.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/8.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/10.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/9.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/11.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/10.jpg" alt="" height="200" width="300">
 
         </div>
         <div class="mini">
-            <img src="/img/12.jpg" alt="" height="200" width="300">
+            <img class="itemimage" src="/img/11.jpg" alt="" height="200" width="300">
 
+        </div>
+        <div class="mini">
+            
+            <img class="itemimage" src="/img/12.jpg" alt="" height="200" width="300">
+            
         </div>
 
     </main>
-    <aside><div class="cartheader"><h2>Корзина</h2></div>
-        <div class="cartselection">
-            <div class="cartimg"><img src="/img/1.jpg" alt="" width="135" height="90">
-            </div>
-            <div class="options">
-                <div class="selectors">
-                    <div class="size">
-                        <select name="size" id="">
-                            <option value="913">9X13</option>
-                            <option value="1015">10X15</option>
-                            <option value="2030">20X30</option>
-                        </select>
-                    </div>
-                    <div class="surface">
-                        <select name="surface" id="">
-                            <option value="glossy">Глянець</option>
-                            <option value="mat">Мат</option>
-                        </select>    
-                    </div>
-                    <div class="remove"><img src="/img/icons/remove.png" alt="">
-                    </div>
-                </div>
-            </div>
+    <aside>        
+        <div class="cartheader"><h2>Корзина</h2></div>
+        <div class="cartcontains">         
+            
         </div>
-        <div class="cartselection"></div>
-        <div class="cartselection"></div>
-            <div class="button">
-                <div>Замовити</div>
-            </div>
-        
-
+        <div class="total"><h3>Сумма: <span class="totalvalue">0 грн</span> </h3></div>
+            <div class="button"><div>Замовити</div></div>
     </aside>
 </body>
 </html>
